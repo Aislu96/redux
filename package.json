@@ -1,5 +1,6 @@
 {
   "name": "redux",
+  "homepage": "https://aislu96.github.io/redux/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
