@@ -1,4 +1,4 @@
-const TodoItem = ({id, text, completed}) => {
+const TodoItem = ({id, text, completed, removeTodo, toggleTodoCompete}) => {
     return (
         <li>
             <input type="checkbox" checked={completed} onChange={() => toggleTodoCompete(id)}/>

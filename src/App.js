@@ -1,6 +1,7 @@
 import './App.css';
 import {useState} from "react";
 import TodoList from "../src/components/TodoList";
+import InputField from "./components/InputField";
 
 function App() {
     const [todos, setTodos] = useState([]);
@@ -30,12 +31,8 @@ function App() {
 
     return (
         <div className="App">
-            <label>
-                <input value={text} onChange={(e) => setText((e.target.value))}/>
-                <button onClick={addTodo}>Add Todo</button>
-            </label>
-
-            <TodoList todos={todos} toggleTodoComplete={toggleTodoCompete} removeTodo={removeTodo}/>
+            <InputField text={text} handelInput={setText} handelSubmit={addTodo}/>
+            <TodoList todos={todos} toggleTodoCompete={toggleTodoCompete} removeTodo={removeTodo}/>
         </div>
     );
 }
